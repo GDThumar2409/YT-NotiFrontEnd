@@ -1,0 +1,49 @@
+<div class="container mt-3 mt-md-5">
+  <form>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail3"
+          placeholder="Phone"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2">Streamers</div>
+      <div class="col-sm-10">
+        <div *ngFor="let streamer of streamers">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="{{ streamer }}"
+              value="{{ streamer }}"
+            />
+            <label class="form-check-label" for="{{ streamer }}">{{
+              streamer
+            }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </div>
+    </div>
+  </form>
+  <div class="alert alert-warning" role="alert">
+    Go to this
+    <a
+      href="https://wa.me/919664870319?text=Connect%20Me%20to%20my%20favourite%20streamers"
+    >
+      URL
+    </a>
+    and Send Hi!! , so that we can send you notification about your favourite
+    streamers.
+  </div>
+</div>
